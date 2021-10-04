@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+		id="viewport"
+		content="width=device-width,
+					height=device-height,
+					initial-scale=1.0,
+					user-scalable=yes"/>
+		<title>Convertisseur de devises</title>
+		<link rel="icon" href="images/money.png">
+		<link rel="stylesheet" type="text/css" href="style2.css">
+	</head>
+	<body>
+		<main>
+			<h1>Conversion de devises</h1>
+			<form name="formulaire">
+				<div class="caseg">Somme en $</div>
+				<div class="cased"><input onblur="convertir();" onchange="setDollar();" type="text" name="dollar" pattern="[0-9]+\.*[0-9]*" title="Entrez une somme numérique valide"></div>
+				<div class="caseg">Somme en €</div>
+				<div class="cased"><input onblur="convertir();" onchange="setEuro();" type="text" name="euro" pattern="[0-9]+\.*[0-9]*" title="Entrez une somme numérique valide"></div>
+				<div class="caseg">Somme en ¥</div>
+				<div class="cased"><input onblur="convertir();" onchange="setYuan();" type="text" name="yuan" pattern="[0-9]+\.*[0-9]*" title="Entrez une somme numérique valide"></div>
+				<div class="caseg"><input type="reset" value="Réinitialiser"></div>
+				<!--<div class="cased"><input type="button" value="Convertir" onclick="convertir();"></div>-->
+			</form>
+			</div>
+		</main>
+		<script type="text/javascript" src="conv.js"></script>
+	</body>
+</html>

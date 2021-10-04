@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+		id="viewport"
+		content="width=device-width,
+					height=device-height,
+					initial-scale=1.0,
+					user-scalable=yes"/>
+		<title>Exercice 2</title>
+		<link rel="icon" href="images/calendar.png">
+		<link rel="stylesheet" type="text/css" href="style2.css">
+	</head>
+	<body>
+		<main>
+			<h1>Sélecteur de dates</h1>
+			<form name="formulaire">
+				<div class="caseg">Date d'arrivée : </div>
+				<div class="cased"><input type="date" name="dateArr"></div>
+				<div class="caseg">Date de départ : </div>
+				<div class="cased"><input type="date" name="dateDep" onchange="calc();"></div>
+				<div class="caseg">Nombre de jours : </div>
+				<div class="cased"><input readonly name="jours"></div>
+				<input type="reset" value="Réinitialiser"></div>
+				<!--<div class="cased"><input type="button" value="Convertir" onclick="convertir();"></div>-->
+			</form>
+			</div>
+		</main>
+		<script type="text/javascript" src="date.js"></script>
+	</body>
+</html>

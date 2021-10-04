@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+		id="viewport"
+		content="width=device-width,
+					height=device-height,
+					initial-scale=1.0,
+					user-scalable=yes"/>
+		<title>R&eacute;servation H&ocirc;tel R&T **</title>
+		<link rel="icon" href="images/globe.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<main>
+			<h1>R&eacute;servation H&ocirc;tel R&T **</h1>
+			<div id="gris">
+				<img src="images/globe.png" id="icone_globe" alt="icone globe internet">
+				<br>
+				<form name="formulaire">
+					<div class="caseg">Nom</div><div class="cased"><input type="text" name="nom" pattern="[A-Za-z]+"></div>
+					<div class="caseg">Pr&eacute;nom</div><div class="cased"><input type="text" name="prenom" pattern="[A-Za-z]+" title="Le champ n'accepte que des lettres"></div>
+					<div class="caseg">Adresse e-mail</div><div class="cased"><input type="email" name="mail"></div>
+					<div class="caseg">Confirmer l'e-mail</div><div class="cased"><input type="email" name="confirm_mail" onblur="confirmMail();"></div>
+					<div class="caseg">Téléphone</div><div class="cased"><input type="tel" name="telephone" value="+33" pattern="[\+]\d{11}" title="Entrez un numéro composé d'un + suivi de 11 chiffres"></div>
+					<div class="caseg">Date d'arrivée</div><div class="cased"><input type="date" name="date_arrivee"></div>
+					<div class="caseg">Date de départ</div><div class="cased"><input type="date" onchange="calcDate();" name="date_depart"></div>
+					<div class="caseg">Nombre de nuits</div><div class="cased"><input readonly name="nb_nuits"></div>
+					<div class="caseg">Type de chambre</div><div class="cased">
+						<select name="type_chambre" onchange="chambres();">
+							<option value="simple">Simple</option>
+							<option value="double">Double</option>
+							<option value="familiale">Familiale</option>
+							<option value="suite">Suite</option>
+						</select>
+					</div>
+					<div class="caseg">Nombre de personnes</div><div class="cased">
+						<input type="radio" name="nb_personnes" id="1" value="1">
+						<label for="1">1</label>
+						<input type="radio" name="nb_personnes" id="2" value="2">
+						<label for="2">2</label>
+						<input type="radio" name="nb_personnes" id="3" value="3">
+						<label for="3">3</label>
+						<input type="radio" name="nb_personnes" id="4" value="4">
+						<label for="4">4</label>
+					</div>
+					<div class="caseg">Nombre de petits-déjeurners</div><div class="cased"><input type="number" oninput="validity.valid||(value='');" min="0" name="nb_pdej"></div>
+					<div class="caseg">Confort</div>
+					<div class="cased" id="grandeCase">
+						<div class="choix"><input type="checkbox" name="tv">TV<br></div>
+						<div class="choix"><input type="checkbox" name="bar">Minibar<br></div>
+						<div class="choix"><input type="checkbox" name="balcon">Balcon vue sur mer<br></div>
+						<div class="choix"><input type="checkbox" name="parking">Place de parking<br></div>
+					</div>
+					<div class="caseg" id="caseReset"><input type="reset" value="Réinitialiser"></div><div class="cased"><input type="submit" value="Envoyer"></div>
+				</form>
+				<footer>&copy; IUT R&T</footer>
+			</div>
+		</main>
+		<script type="text/javascript" src="hotel.js"></script>
+	</body>
+</html>

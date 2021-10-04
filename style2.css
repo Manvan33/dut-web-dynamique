@@ -1,0 +1,64 @@
+html, body {
+  width: 100%;
+  margin: 0;
+}
+main {
+  margin: 3em auto;
+  border: 2px solid grey;
+  max-width: 80%;
+  padding: 0 1em 1em 1em;
+}
+main h1 {
+  padding: 0 0.3em;
+  display: inline;
+  background: white;
+  position: relative;
+  top: -0.5em;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: gr
+}
+div.caseg, div.cased {
+  min-width: 45%;
+  max-width: 90%;
+  margin: 0.5em;
+  height: 2em;
+  padding: 0;
+  text-align: right;
+}
+div.cased {
+  display: flex;
+  align-content: center;
+  flex-grow:1;
+  text-align: center;
+}
+div.caseg {
+  line-height: 2em;
+  margin-bottom: 0;
+  padding-right: 1em;
+}
+form input:not([type=radio]),select {
+  flex-grow: 2;
+  width: 70%;
+  max-width: 80%;
+  height: 90%;
+}
+#caseReset {
+  text-align: left;
+  flex-grow: 1;
+}
+form input[type=reset] {
+  text-align: center;
+  margin:0;
+  width: 100%;
+}
+ul a {
+  font-size: 1.3em;
+}
+@media screen and (max-width: 800px) {
+  main {
+    max-width: 100%;
+  }
+}
